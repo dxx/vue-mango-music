@@ -13,9 +13,9 @@
           <div class="swiper-pagination"></div>
         </div>
         <div class="album-container" :style="{display: this.loading === true ? 'none' : ''}">
-          <h1 class="title">最新专辑</h1>
+          <h1 class="title theme-recommend-title">最新专辑</h1>
           <div class="album-list">
-            <div class="album-wrapper" v-for="album in newAlbums" :key="album.id" @click="toAlbumDetail(album.mId)">
+            <div class="album-wrapper theme-album-wrapper" v-for="album in newAlbums" :key="album.id" @click="toAlbumDetail(album.mId)">
               <div class="left">
                   <img v-lazy="{src: album.img, loading: loadingImg}" width="100%" height="100%" :alt="album.name" />
               </div>
@@ -140,13 +140,13 @@
         text-align: center
         font-size: 15px
         font-weight: 400
-        color: #FFA500
+        /*color: #FFA500*/
       .album-list
         font-size: 15px
         padding-bottom: 20px
         .album-wrapper
           margin: 20px
-          color: rgba(0, 0, 0, 0.6)
+          /*color: rgba(0, 0, 0, 0.6)*/
           .left
             float: left
             width: 60px
@@ -161,7 +161,7 @@
               text-overflow: ellipsis
               white-space: nowrap
             .album-name
-              color: #333333
+              /*color: #333333*/
               font-weight: 500
             .public-time
               position: absolute

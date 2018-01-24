@@ -12,8 +12,6 @@ This is a music player application written by vue.
 
 It uses vue to build.
 
-Online preview address: [https://code-mcx.github.io/vue-mango-music](https://code-mcx.github.io/vue-mango-music).
-
 ## Technology Stack
 
 Vue + Vue-Router + Vuex + ES6 + Webpack

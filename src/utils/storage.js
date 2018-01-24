@@ -1,7 +1,14 @@
 /**
- * 歌曲本地持久化
+ * 本地持久化操作对象
  */
 let localStorage = {
+  setTheme(key) {
+    window.localStorage.setItem("theme", key);
+  },
+  getTheme() {
+    let theme = window.localStorage.getItem("theme");
+    return !theme ? "mangoYellow" : theme;
+  },
   setCurrentSong(song) {
     window.localStorage.setItem("song", JSON.stringify(song));
   },

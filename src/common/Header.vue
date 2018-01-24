@@ -1,8 +1,8 @@
 <template>
   <div class="music-header">
-				<span class="header-back" @click="$router.go(-1)">
-					<i class="icon-back"></i>
-				</span>
+    <span class="header-back" @click="$router.go(-1)">
+      <i class="icon-back"></i>
+    </span>
     <div class="header-title">
       {{title}}
     </div>

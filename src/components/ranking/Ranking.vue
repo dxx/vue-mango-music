@@ -2,7 +2,7 @@
   <div class="music-ranking">
     <scroll>
       <div class="ranking-list" :style="{display: this.loading === true ? 'none' : ''}">
-        <div class="ranking-wrapper" v-for="ranking in rankingList" :key="ranking.id" @click="toDetail(ranking.id)">
+        <div class="ranking-wrapper theme-ranking-wrapper" v-for="ranking in rankingList" :key="ranking.id" @click="toDetail(ranking.id)">
           <div class="left">
               <img v-lazy="{src: ranking.img, loading: loadingImg}" :alt="ranking.title" />
           </div>
@@ -14,7 +14,7 @@
               <span class="index">{{index + 1}}</span>
               <span>{{song.name}}</span>
               &nbsp;-&nbsp;
-              <span class="song">{{song.singer}}</span>
+              <span class="singer">{{song.singer}}</span>
             </div>
             <i class="arrow"></i>
           </div>
@@ -85,7 +85,7 @@
       .ranking-wrapper
         display: flex
         margin: 15px
-        background-color: #FFFFFF
+        /*background-color: #FFFFFF*/
         .left
           flex: 0 0 100px
           width: w = 100px
@@ -109,8 +109,8 @@
             white-space: nowrap
             .index
               margin-right: 6px
-            .song
-              color: rgba(0, 0, 0, 0.5)
+            /*.singer
+              color: rgba(0, 0, 0, 0.5)*/
           .arrow
             position: absolute
             top: 50%

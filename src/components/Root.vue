@@ -1,10 +1,11 @@
 <template>
-  <div class="root">
-    <header class="app-header">
+  <div class="root theme-root">
+    <header class="app-header theme-app-header">
+      <i class="icon-et-more app-more" @click="menuShow = true"></i>
       <img :src="logo" class="app-logo" alt="logo" />
       <h1 class="app-title">Mango Music</h1>
     </header>
-    <nav class="music-tab">
+    <nav class="music-tab theme-music-tab">
       <div class="tab-item">
         <router-link to="/recommend" class="router-link">
           <span>推荐</span>
@@ -30,11 +31,13 @@
       <router-view />
     </div>
     <music-player />
+    <music-menu :show="menuShow" @closeMenu="menuShow = false"/>
   </div>
 </template>
 
 <script>
   import MusicPlayer from "./play/MusicPlayer"
+  import MusicMenu from "./setting/Menu"
 
   import logo from "../assets/imgs/logo.png"
   import "../assets/stylus/reset.styl"
@@ -45,11 +48,13 @@
     name: "root",
     data() {
       return {
-        logo
+        logo,
+        menuShow: false
       }
     },
     components: {
-      MusicPlayer
+      MusicPlayer,
+      MusicMenu
     }
   }
 </script>
@@ -58,13 +63,19 @@
   .root
     width: 100%
     height: 100%
-    color: #333333
-    background-color: #F8F8FF
+    /*color: #333333*/
+    /*background-color: #F8F8FF*/
     .app-header
       height: 50px
       line-height: 50px
       text-align: center
-      background-color: #FFA500
+      position: relative
+      /*background-color: #FFA500*/
+      .app-more
+        position: absolute
+        top: 15px
+        left: 15px
+        font-size: 20px
       .app-logo
         width: 30px
         height: 25px
@@ -76,15 +87,15 @@
         margin-left: 6px
         font-size: 18px
         font-weight: 300
-        color: #FFFFF0
+        /*color: #FFFFF0*/
     .music-tab
       display: flex
       height: 30px
       padding: 2px 0
       line-height: 30px
-      color: rgba(0, 0, 0, .7)
       text-align: center
-      background-color: #FFFFFF
+      /*color: rgba(0, 0, 0, .7)*/
+      /*background-color: #FFFFFF*/
       .tab-item
         flex: 1
     .music-view
@@ -97,7 +108,7 @@
     display: block
     color: inherit
     text-decoration: none
-    &.router-link-active
+    /*&.router-link-active
       color: #FFA500
-      border-bottom: 2px solid #FFA500
+      border-bottom: 2px solid #FFA500*/
 </style>

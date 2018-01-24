@@ -1,6 +1,6 @@
 <template>
   <transition name="mini-translate">
-    <div class="mini-player" v-show="!showStatus" @click="handleShow">
+    <div class="mini-player theme-mini-player" v-show="!showStatus" @click="handleShow">
       <div class="player-img rotate" :style="imgStyle">
         <img :src="img" :alt="song.name"/>
       </div>
@@ -87,7 +87,7 @@
     z-index: 1000
     width: 100%
     height: 54px
-    background-color: #FFFFFF
+    /*background-color: #FFFFFF*/
     &.mini-translate-enter-active, &.mini-translate-leave-active
       transition: transform .3s
       transform: translate3d(0, 0, 0)
@@ -99,7 +99,7 @@
       height: 48px
       left: 10px
       top: -6px
-      border: 2px solid #EEEEEE
+      /*border: 2px solid #EEEEEE*/
       border-radius: 50%
       img
         width: 100%
@@ -122,17 +122,17 @@
       .singer
         margin-top: 2px
         font-size: 12px
-        color: rgba(0, 0, 0, .7)
+        /*color: rgba(0, 0, 0, .7)*/
       .progress-wrapper
         .progress-bar
           height: 2px
-          background-color: rgba(0, 0, 0, .1)
+          /*background-color: rgba(0, 0, 0, .1)*/
     .player-right
       position: absolute
       top: 15px
       right: 15px
       padding: 1px
-      color: #FFD700
+      /*color: #FFD700*/
       font-size: 26px
       .ml-10
         margin-left: 10px

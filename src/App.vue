@@ -6,6 +6,7 @@
 
 <script>
   import Root from "./components/Root"
+  import "./utils/theme"
 
   export default {
     name: 'app',

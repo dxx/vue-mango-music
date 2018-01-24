@@ -18,7 +18,7 @@
     <div ref="container" class="detail-container">
       <div class="detail-scroll" :style="{display: loading ===  true ? 'none' : ''}">
         <scroll @scroll="handleScroll">
-          <div class="detail-wrapper">
+          <div class="detail-wrapper theme-detail-wrapper">
             <div class="song-count">{{title}} 共{{data.songs.length}}首</div>
             <div class="song-list">
               <div class="song" v-for="(song, index) in data.songs" :key="song.id" @click="playSong(song, $event)">
@@ -234,7 +234,7 @@
       overflow: visible
     .detail-wrapper
       padding: 25px 25px 0 25px
-      background-color: #F8F8FF
+      /*background-color: #F8F8FF*/
       .song-count
         font-size: 14px
       .song-list
@@ -256,11 +256,11 @@
             color: #FF7F00
           .song-name
             height: 16px
-            color: #000000
+            /*color: #000000*/
           .song-singer
             font-size: 14px
             padding-top: 8px
-            color: rgba(0, 0, 0, 0.6)
+            /*color: rgba(0, 0, 0, 0.6)*/
           .song-name, .song-singer
             overflow: hidden
             text-overflow: ellipsis

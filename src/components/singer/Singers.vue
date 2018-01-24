@@ -1,5 +1,5 @@
 <template>
-  <div class="music-singers">
+  <div class="music-singers theme-music-singers">
     <div class="nav">
       <scroll direction="horizontal">
         <div class="tag" ref="tag">
@@ -194,8 +194,8 @@
           box-sizing: border-box
           cursor: default
           &.choose
-            color: #FFA500
-            border: 1px solid #FFA500
+            /*color: #FFA500
+            border: 1px solid #FFA500*/
             border-radius: 10px
     .singer-list
       position: absolute

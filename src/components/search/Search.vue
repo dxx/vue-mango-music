@@ -1,7 +1,7 @@
 <template>
-  <div class="music-search">
-    <div class="search-box-wrapper">
-      <div class="search-box">
+  <div class="music-search theme-search">
+    <div class="search-box-wrapper theme-search-box-wrapper">
+      <div class="search-box theme-search-box">
         <i class="icon-search"></i>
         <input type="text" class="search-input" placeholder="搜索歌曲、歌手、专辑" v-model="w" @keydown="handleKeyDown" />
       </div>
@@ -15,7 +15,7 @@
         </template>
       </div>
     </div>
-    <div class="search-result" :style="cancelButtonStyle">
+    <div class="search-result theme-search-result" :style="cancelButtonStyle">
       <scroll>
         <div class="result-container">
           <!-- 专辑 -->
@@ -280,16 +280,16 @@
 <style lang="stylus" scoped>
   .music-search
     height: 100%
-    background-color: #FFFFFF
+    /*background-color: #FFFFFF*/
     .search-box-wrapper
       position: relative
       padding: 20px
-      background-color: #F8F8FF
+      /*background-color: #F8F8FF*/
     .search-box
       padding: 10px
-      background-color: #FFFFFF
       border-radius: 3px
       line-height: 0
+      /*background-color: #FFFFFF*/
       .search-input
         width: 80%
         margin-left: 10px
@@ -297,7 +297,7 @@
         border:none
         outline: none
         vertical-align: top
-        color: #000000
+        /*color: #000000*/
     .cancel-button
       position: absolute
       top: 50%
@@ -315,7 +315,7 @@
       display: none
       .title
         font-size: 14px
-        color: rgba(0, 0, 0, .7)
+        /*color: rgba(0, 0, 0, .7)*/
       .hot-list
         .hot-item
           float: left
@@ -324,8 +324,8 @@
           margin-top: 10px
           border-radius: 10px
           font-size: 14px
-          color: #000000
-          border: 1px solid rgba(0, 0, 0, .7)
+          /*color: #000000
+          border: 1px solid rgba(0, 0, 0, .7)*/
     .search-result
       position: absolute
       left: 0
@@ -336,7 +336,7 @@
         padding-bottom: 52px
       .album-wrapper
         padding: 5px 10px
-        border-top: 1px solid #E5E5E5
+        /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
           width: 40px
@@ -357,14 +357,14 @@
             margin-top: 3px
             padding: 1px 0
             font-size: 14px
-            color: #000000
+            /*color: #000000*/
           .singer
             margin-top: 5px
             font-size: 12px
-            color: rgba(0, 0, 0, .6);
+            /*color: rgba(0, 0, 0, .6)*/
       .singer-wrapper
         padding: 5px 10px
-        border-top: 1px solid #E5E5E5
+        /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
           width: 40px
@@ -381,14 +381,14 @@
           .singer
             margin-top: 5px
             font-size: 14px
-            color: #000000
+            /*color: #000000*/
           .info
             margin-top: 5px
             font-size: 12px
-            color: rgba(0, 0, 0, .6);
+            /*color: rgba(0, 0, 0, .6)*/
       .song-wrapper
         padding: 5px 10px
-        border-top: 1px solid #E5E5E5
+        /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
           width: 40px
@@ -408,11 +408,11 @@
           .song
             padding: 3px 0 1px 0
             font-size: 14px
-            color: #000000
+            /*color: #000000*/
           .singer
             margin-top: 5px
             font-size: 12px
-            color: rgba(0, 0, 0, .6);
+            /*color: rgba(0, 0, 0, .6)*/
 
   /*音符样式*/
   .music-ico

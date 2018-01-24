@@ -2,6 +2,10 @@ import * as MutationTypes from "./mutation-types"
 import localStorage from "../utils/storage"
 
 const mutation = {
+  [MutationTypes.SET_THEME](state, theme) {
+    state.theme = theme;
+    localStorage.setTheme(theme);
+  },
   /**
    * 显示或隐藏播放状态，使用es6计算属性命名作为方法名
    */

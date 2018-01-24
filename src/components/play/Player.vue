@@ -184,9 +184,6 @@
           this.changeCurrentSong(playSongs[currentIndex]);
           // 调用父组件修改当前歌曲位置
           this.$emit("changeCurrentIndex", currentIndex);
-
-          // 重新加载歌曲
-          // this.audioDOM.load();
         }
       },
       /**
@@ -212,9 +209,6 @@
           this.changeCurrentSong(playSongs[currentIndex]);
           // 调用父组件修改当前歌曲位置
           this.$emit("changeCurrentIndex", currentIndex);
-
-          // 重新加载歌曲
-          // this.audioDOM.load();
         }
       },
       /**
