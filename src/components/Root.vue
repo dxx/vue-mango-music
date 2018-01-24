@@ -102,7 +102,7 @@
       position: fixed
       top: 84px
       left: 0
-      bottom: 0
+      bottom: 54px
       width: 100%
   .router-link
     display: block

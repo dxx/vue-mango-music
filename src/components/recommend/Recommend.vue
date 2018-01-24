@@ -124,8 +124,6 @@
   .music-recommend
     width: 100%
     height: 100%
-    .recommend-wrapper
-      padding-bottom: 52px
     .slider-container
       height: 160px
       position: relative

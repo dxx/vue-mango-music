@@ -81,7 +81,7 @@
     width: 100%
     height: 100%
     .ranking-list
-      padding-bottom: 67px
+      padding-bottom: 15px
       .ranking-wrapper
         display: flex
         margin: 15px

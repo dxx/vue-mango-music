@@ -204,8 +204,6 @@
       right: 0
       bottom: 0
       padding: 0 20px
-      .singer-container
-        padding-bottom: 52px
       .singer-wrapper
         margin: 10px 0
         &:first-child

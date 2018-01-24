@@ -332,8 +332,6 @@
       right: 0
       top: 77px
       bottom: 0
-      .result-container
-        padding-bottom: 52px
       .album-wrapper
         padding: 5px 10px
         /*border-top: 1px solid #E5E5E5*/
