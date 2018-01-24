@@ -1,0 +1,15 @@
+/* 子路由动画 */
+.translate-enter-active, .translate-leave-active
+  transition: transform .3s
+  transform: translate3d(0, 0, 0)
+.translate-enter, .translate-leave-to
+  transform: translate3d(100%, 0, 0)
+
+/* 旋转动画 */
+.rotate
+  animation: rotate 15s linear infinite
+
+@keyframes rotate {
+  from { transform: rotateZ(0deg)}
+  to { transform: rotateZ(360deg)}
+}
