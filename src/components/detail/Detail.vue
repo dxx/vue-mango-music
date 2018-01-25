@@ -18,7 +18,7 @@
     <div ref="container" class="detail-container">
       <div class="detail-scroll" :style="{display: loading ===  true ? 'none' : ''}">
         <scroll @scroll="handleScroll">
-          <div class="detail-wrapper theme-detail-wrapper">
+          <div class="detail-wrapper skin-detail-wrapper">
             <div class="song-count">{{title}} 共{{data.songs.length}}首</div>
             <div class="song-list">
               <div class="song" v-for="(song, index) in data.songs" :key="song.id" @click="playSong(song, $event)">

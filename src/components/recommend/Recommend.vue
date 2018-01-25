@@ -13,9 +13,9 @@
           <div class="swiper-pagination"></div>
         </div>
         <div class="album-container" :style="{display: this.loading === true ? 'none' : ''}">
-          <h1 class="title theme-recommend-title">最新专辑</h1>
+          <h1 class="title skin-recommend-title">最新专辑</h1>
           <div class="album-list">
-            <div class="album-wrapper theme-album-wrapper" v-for="album in newAlbums" :key="album.id" @click="toAlbumDetail(album.mId)">
+            <div class="album-wrapper skin-album-wrapper" v-for="album in newAlbums" :key="album.id" @click="toAlbumDetail(album.mId)">
               <div class="left">
                   <img v-lazy="{src: album.img, loading: loadingImg}" width="100%" height="100%" :alt="album.name" />
               </div>

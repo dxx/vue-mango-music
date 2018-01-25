@@ -1,6 +1,6 @@
 <template>
   <transition name="mini-translate">
-    <div class="mini-player theme-mini-player" v-show="!showStatus" @click="handleShow">
+    <div class="mini-player skin-mini-player" v-show="!showStatus" @click="handleShow">
       <div class="player-img rotate" :style="imgStyle">
         <img :src="img" :alt="song.name"/>
       </div>

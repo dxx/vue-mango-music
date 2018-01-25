@@ -1,7 +1,7 @@
 <template>
-  <div class="music-search theme-search">
-    <div class="search-box-wrapper theme-search-box-wrapper">
-      <div class="search-box theme-search-box">
+  <div class="music-search skin-search">
+    <div class="search-box-wrapper skin-search-box-wrapper">
+      <div class="search-box skin-search-box">
         <i class="icon-search"></i>
         <input type="text" class="search-input" placeholder="搜索歌曲、歌手、专辑" v-model="w" @keydown="handleKeyDown" />
       </div>
@@ -15,7 +15,7 @@
         </template>
       </div>
     </div>
-    <div class="search-result theme-search-result" :style="cancelButtonStyle">
+    <div class="search-result skin-search-result" :style="cancelButtonStyle">
       <scroll>
         <div class="result-container">
           <!-- 专辑 -->

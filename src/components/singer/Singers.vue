@@ -1,5 +1,5 @@
 <template>
-  <div class="music-singers theme-music-singers">
+  <div class="music-singers skin-music-singers">
     <div class="nav">
       <scroll direction="horizontal">
         <div class="tag" ref="tag">

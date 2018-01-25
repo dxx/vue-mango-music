@@ -1,7 +1,7 @@
 // Mutation函数操作类型
 
-// 设置主题
-export const SET_THEME = "SET_THEME";
+// 设置皮肤
+export const SET_SKIN = "SET_SKIN";
 
 // 显示或隐藏播放页面
 export const SHOW_PLAYER = "SHOW_PLAYER";

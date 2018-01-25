@@ -2,11 +2,11 @@
  * 本地持久化操作对象
  */
 let localStorage = {
-  setTheme(key) {
-    window.localStorage.setItem("theme", key);
+  setSkin(key) {
+    window.localStorage.setItem("skin", key);
   },
-  getTheme() {
-    let theme = window.localStorage.getItem("theme");
+  getSkin() {
+    let theme = window.localStorage.getItem("skin");
     return !theme ? "mangoYellow" : theme;
   },
   setCurrentSong(song) {

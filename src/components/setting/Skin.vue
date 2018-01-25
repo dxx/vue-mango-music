@@ -1,17 +1,17 @@
 <template>
   <transition name="pop">
-    <div class="music-theme" v-show="show">
+    <div class="music-skin" v-show="show">
       <div class="header">
-        主题中心
+        皮肤中心
         <span class="cancel" @click="$emit('close')">取消</span>
       </div>
-      <div class="theme-title">推荐主题</div>
-      <div class="theme-container">
-        <div class="theme-wrapper" v-for="theme in themes" @click="setCurrentTheme(theme.key)">
-          <div class="theme-color" :style="{backgroundColor: theme.color, boxShadow: `0 0 3px ${theme.color}`}">
-            <i class="icon-right" v-show="theme.key === currentTheme"></i>
+      <div class="skin-title">推荐皮肤</div>
+      <div class="skin-container">
+        <div class="skin-wrapper" v-for="skin in skins" @click="setCurrentSkin(skin.key)">
+          <div class="skin-color" :style="{backgroundColor: skin.color, boxShadow: `0 0 3px ${skin.color}`}">
+            <i class="icon-right" v-show="skin.key === currentSkin"></i>
           </div>
-          <div>{{theme.name}}</div>
+          <div>{{skin.name}}</div>
         </div>
       </div>
     </div>
@@ -20,17 +20,17 @@
 
 <script>
   import {mapState, mapMutations} from "vuex"
-  import {SET_THEME} from "../../store/mutation-types"
-  import {theme, setThemeStyle} from "../../utils/theme"
+  import {SET_SKIN} from "../../store/mutation-types"
+  import {skin, setSkinStyle} from "../../utils/skin"
 
   export default {
-    name: "theme",
+    name: "skin",
     props: {
       show: Boolean
     },
     data() {
       return {
-        themes: [
+        skins: [
           {key: "mangoYellow", name: "芒果黄", color: "#FFD700"},
           {key: "coolBlack", name: "炫酷黑", color: "#212121"},
           {key: "kuGouBlue", name: "酷狗蓝", color: "#2CA2F9"},
@@ -41,26 +41,26 @@
     },
     computed: {
       ...mapState({
-        currentTheme: "theme"
+        currentSkin: "skin"
       })
     },
     methods: {
-      setCurrentTheme(key) {
-        //  设置主题
-        setThemeStyle(theme[key]);
-        this.setTheme(key);
+      setCurrentSkin(key) {
+        //  设置皮肤
+        setSkinStyle(skin[key]);
+        this.setSkin(key);
         //  关闭当前页面
         this.$emit('close');
       },
       ...mapMutations({
-        "setTheme": SET_THEME
+        "setSkin": SET_SKIN
       })
     }
   }
 </script>
 
 <style lang="stylus" scoped>
-  .music-theme
+  .music-skin
     position: fixed
     top: 0
     left: 0
@@ -94,7 +94,7 @@
         position: absolute
         right: 15px
         font-size: 16px
-    .theme-title
+    .skin-title
       height: 15px
       line-height: 15px
       padding-left: 15px
@@ -107,19 +107,19 @@
         width: 3px
         height: 100%
         background-color: #FAEBD7
-    .theme-container
+    .skin-container
       display: flex
       margin-top: 20px
       flex-wrap: wrap
       font-size: 14px
-      .theme-wrapper
+      .skin-wrapper
         flex: 0 0 33%
         width: 33%
         text-align: center
         padding-left: 10px
         margin-bottom: 10px
         box-sizing: border-box
-        .theme-color
+        .skin-color
           padding-bottom: 110%
           margin-bottom: 5px
           box-shadow: 0 0 3px #FFFFFF

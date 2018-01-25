@@ -4,7 +4,7 @@
       <div class="bottom-container" v-show="show" @click="close">
         <div class="bottom-wrapper">
           <div class="item" @click="showSetting(true)">
-            主题中心
+            皮肤中心
           </div>
           <div class="item-close" @click="close">
             关闭
@@ -12,12 +12,12 @@
         </div>
       </div>
     </transition>
-    <theme :show="themeShow" @close="showSetting(false)"/>
+    <skin :show="skinShow" @close="showSetting(false)"/>
   </div>
 </template>
 
 <script>
-  import Theme from "./Theme"
+  import Skin from "./Skin"
 
   export default {
     name: "music-menu",
@@ -26,7 +26,7 @@
     },
     data() {
       return {
-        themeShow: false
+        skinShow: false
       }
     },
     methods: {
@@ -37,12 +37,12 @@
         this.close();
         // menu关闭后打开设置
         setTimeout(() => {
-          this.themeShow = status;
+          this.skinShow = status;
         }, 300);
       }
     },
     components: {
-      Theme
+      Skin
     }
   }
 </script>

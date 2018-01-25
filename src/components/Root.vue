@@ -1,11 +1,11 @@
 <template>
-  <div class="root theme-root">
-    <header class="app-header theme-app-header">
+  <div class="root skin-root">
+    <header class="app-header skin-app-header">
       <i class="icon-et-more app-more" @click="menuShow = true"></i>
       <img :src="logo" class="app-logo" alt="logo" />
       <h1 class="app-title">Mango Music</h1>
     </header>
-    <nav class="music-tab theme-music-tab">
+    <nav class="music-tab skin-music-tab">
       <div class="tab-item">
         <router-link to="/recommend" class="router-link">
           <span>推荐</span>

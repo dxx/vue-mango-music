@@ -2,7 +2,7 @@
   <div class="music-ranking">
     <scroll>
       <div class="ranking-list" :style="{display: this.loading === true ? 'none' : ''}">
-        <div class="ranking-wrapper theme-ranking-wrapper" v-for="ranking in rankingList" :key="ranking.id" @click="toDetail(ranking.id)">
+        <div class="ranking-wrapper skin-ranking-wrapper" v-for="ranking in rankingList" :key="ranking.id" @click="toDetail(ranking.id)">
           <div class="left">
               <img v-lazy="{src: ranking.img, loading: loadingImg}" :alt="ranking.title" />
           </div>
