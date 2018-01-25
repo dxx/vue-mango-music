@@ -6,8 +6,8 @@ let localStorage = {
     window.localStorage.setItem("skin", key);
   },
   getSkin() {
-    let theme = window.localStorage.getItem("skin");
-    return !theme ? "mangoYellow" : theme;
+    let skin = window.localStorage.getItem("skin");
+    return !skin ? "mangoYellow" : skin;
   },
   setCurrentSong(song) {
     window.localStorage.setItem("song", JSON.stringify(song));
