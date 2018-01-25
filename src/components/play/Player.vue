@@ -360,9 +360,9 @@
       // 解决手机端有些浏览器无法自动播放的问题
       let handle = () => {
         this.audioDOM.load();
-        document.removeEventListener("click", handle);
+        document.removeEventListener("click", handle, true);
       };
-      document.addEventListener("click", handle);
+      document.addEventListener("click", handle, true);
     },
     components: {
       MiniPlayer,
