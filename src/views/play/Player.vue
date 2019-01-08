@@ -145,7 +145,7 @@
       playOrPause() {
         if (this.playStatus === false) {
           // 表示第一次播放
-          if (this.first === undefined) {
+          if (this.first === undefined && !this.audioDOM.src) {
             this.audioDOM.src = this.song.url;
             this.first = true;
           }
