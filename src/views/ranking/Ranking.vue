@@ -29,11 +29,11 @@
 </template>
 
 <script>
-  import Loading from "@/common/loading/Loading"
-  import Scroll from "@/common/Scroll"
-  import {getRankingList} from "@/api/ranking"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as RankingModel from "@/model/ranking"
+  import Loading from "@/components/loading/Loading"
+  import Scroll from "@/components/Scroll"
+  import { getRankingList } from "@/api/ranking"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as RankingModel from "@/models/ranking"
 
   export default {
     name: "ranking",

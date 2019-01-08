@@ -1,5 +1,5 @@
 import jsonp from "./jsonp"
-import {URL, PARAM, OPTION} from "./config"
+import { URL, PARAM, OPTION } from "./config"
 
 export function getCarousel() {
   const data = Object.assign({}, PARAM, {

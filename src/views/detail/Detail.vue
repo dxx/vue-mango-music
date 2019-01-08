@@ -50,12 +50,12 @@
 </template>
 
 <script>
-  import {mapMutations} from "vuex"
-  import {SHOW_PLAYER, CHANGE_SONG, SET_SONGS} from "../../store/mutation-types"
-  import Loading from "@/common/loading/Loading"
-  import MusicHeader from "@/common/Header"
-  import Scroll from "@/common/Scroll"
-  import {getTransitionEndName} from "@/utils/event"
+  import { mapMutations } from "vuex"
+  import { SHOW_PLAYER, CHANGE_SONG, SET_SONGS } from "../../store/mutation-types"
+  import Loading from "@/components/loading/Loading"
+  import MusicHeader from "@/components/Header"
+  import Scroll from "@/components/Scroll"
+  import { getTransitionEndName } from "@/util/event"
 
   export default {
     name: "detail",
@@ -82,13 +82,13 @@
           let transitionEndName = getTransitionEndName(item);
           item.addEventListener(transitionEndName, function() {
             this.style.display = "none";
-            this.style["webkitTransform"] = "translate3d(0, 0, 0)";
-            this.style["transform"] = "translate3d(0, 0, 0)";
+            this.style.webkitTransform = "translate3d(0, 0, 0)";
+            this.style.transform = "translate3d(0, 0, 0)";
             this.run = false;
 
             let icon = this.querySelector("div");
-            icon.style["webkitTransform"] = "translate3d(0, 0, 0)";
-            icon.style["transform"] = "translate3d(0, 0, 0)";
+            icon.style.webkitTransform = "translate3d(0, 0, 0)";
+            icon.style.transform = "translate3d(0, 0, 0)";
           }, false);
         });
       },
@@ -106,12 +106,12 @@
               item.style.display = "inline-block";
               setTimeout(() => {
                 item.run = true;
-                item.style["webkitTransform"] = "translate3d(0, 1000px, 0)";
-                item.style["transform"] = "translate3d(0, 1000px, 0)";
+                item.style.webkitTransform = "translate3d(0, 1000px, 0)";
+                item.style.transform = "translate3d(0, 1000px, 0)";
 
                 let icon = item.querySelector("div");
-                icon.style["webkitTransform"] = "translate3d(-30px, 0, 0)";
-                icon.style["transform"] = "translate3d(-30px, 0, 0)";
+                icon.style.webkitTransform = "translate3d(-30px, 0, 0)";
+                icon.style.transform = "translate3d(-30px, 0, 0)";
               }, 10);
               break;
             }
@@ -149,8 +149,8 @@
           }
         } else {
           let transform = `scale(${1 + y * 0.004}, ${1 + y * 0.004})`;
-          bgDOM.style["webkitTransform"] = transform;
-          bgDOM.style["transform"] = transform;
+          bgDOM.style.webkitTransform = transform;
+          bgDOM.style.transform = transform;
           playButtonWrapperDOM.style.marginTop = `${y}px`;
         }
       },

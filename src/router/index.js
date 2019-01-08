@@ -1,16 +1,16 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-
-import Recommend from "../components/recommend/Recommend"
-import Ranking from "../components/ranking/Ranking"
-import Singer from "../components/singer/Singers"
-import Search from "../components/search/Search"
-
-import Album from "../components/album/Album"
-import RankingInfo from "../components/ranking/RankingInfo"
-import SingerInfo from "../components/singer/Singer"
+import Vue from "vue"
+import Router from "vue-router"
 
 Vue.use(Router);
+
+const Recommend = () => import("../views/recommend/Recommend");
+const Ranking = () => import("../views/ranking/Ranking");
+const Singer = () => import("../views/singer/Singers");
+const Search = () => import("../views/search/Search");
+
+const Album = () => import("../views/album/Album");
+const RankingInfo = () => import("../views/ranking/RankingInfo");
+const SingerInfo = () => import("../views/singer/Singer")
 
 const routes = [
   {

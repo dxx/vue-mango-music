@@ -3,14 +3,20 @@
     <div class="nav">
       <scroll direction="horizontal">
         <div class="tag" ref="tag">
-          <a v-for="type in types" :class="{choose: type.key === typeKey}" @click="handleTypeClick(type.key)">
+          <a v-for="type in types"
+            :class="{choose: type.key === typeKey}"
+            :key="type.key"
+            @click="handleTypeClick(type.key)">
             {{type.name}}
           </a>
         </div>
       </scroll>
       <scroll direction="horizontal">
         <div class="index" ref="index">
-          <a v-for="type in indexs" :class="{choose: type.key === indexKey}" @click="handleIndexClick(type.key)">
+          <a v-for="type in indexs"
+            :class="{choose: type.key === indexKey}"
+            :key="type.key"
+            @click="handleIndexClick(type.key)">
             {{type.name}}
           </a>
         </div>
@@ -38,11 +44,11 @@
 </template>
 
 <script>
-  import Loading from "@/common/loading/Loading"
-  import Scroll from "@/common/Scroll"
-  import {getSingerList} from "@/api/singer"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as SingerModel from "@/model/singer"
+  import Loading from "@/components/loading/Loading"
+  import Scroll from "@/components/Scroll"
+  import { getSingerList } from "@/api/singer"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as SingerModel from "@/models/singer"
 
   export default {
     name: "singers",

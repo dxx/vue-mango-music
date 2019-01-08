@@ -1,5 +1,5 @@
 import * as MutationTypes from "./mutation-types"
-import localStorage from "../utils/storage"
+import localStorage from "../util/storage"
 
 const mutation = {
   [MutationTypes.SET_SKIN](state, skin) {

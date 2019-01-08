@@ -32,9 +32,9 @@
 </template>
 
 <script>
-  import {mapState, mapMutations} from "vuex"
-  import {CHANGE_SONG, REMOVE_SONG_FROM_LIST} from "../../store/mutation-types"
-  import Scroll from "@/common/Scroll"
+  import { mapState, mapMutations } from "vuex"
+  import { CHANGE_SONG, REMOVE_SONG_FROM_LIST } from "../../store/mutation-types"
+  import Scroll from "@/components/Scroll"
 
   export default {
     name: "player-list",

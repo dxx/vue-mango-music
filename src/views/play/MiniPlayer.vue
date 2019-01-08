@@ -41,11 +41,11 @@
       imgStyle() {
         let style = {};
         if (this.playStatus === true) {
-          style["WebkitAnimationPlayState"] = "running";
-          style["animationPlayState"] = "running";
+          style.webkitAnimationPlayState = "running";
+          style.animationPlayState = "running";
         } else {
-          style["WebkitAnimationPlayState"] = "paused";
-          style["animationPlayState"] = "paused";
+          style.webkitAnimationPlayState = "paused";
+          style.animationPlayState = "paused";
         }
         return style;
       },

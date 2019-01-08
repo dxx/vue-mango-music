@@ -1,5 +1,5 @@
 import jsonp from "./jsonp"
-import {URL, PARAM, OPTION} from "./config"
+import { URL, PARAM, OPTION } from "./config"
 
 export function getHotKey() {
   const data = Object.assign({}, PARAM, {

@@ -7,7 +7,7 @@
       </div>
       <div class="skin-title">推荐皮肤</div>
       <div class="skin-container">
-        <div class="skin-wrapper" v-for="skin in skins" @click="setCurrentSkin(skin.key)">
+        <div class="skin-wrapper" v-for="skin in skins" @click="setCurrentSkin(skin.key)" :key="skin.key">
           <div class="skin-color" :style="{backgroundColor: skin.color, boxShadow: `0 0 3px ${skin.color}`}">
             <i class="icon-right" v-show="skin.key === currentSkin"></i>
           </div>
@@ -19,9 +19,9 @@
 </template>
 
 <script>
-  import {mapState, mapMutations} from "vuex"
-  import {SET_SKIN} from "../../store/mutation-types"
-  import {skin, setSkinStyle} from "../../utils/skin"
+  import { mapState, mapMutations } from "vuex"
+  import { SET_SKIN } from "../../store/mutation-types"
+  import { skin, setSkinStyle } from "../../util/skin"
 
   export default {
     name: "skin",

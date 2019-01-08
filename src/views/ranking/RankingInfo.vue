@@ -6,11 +6,11 @@
 
 <script>
   import Detail from "../detail/Detail"
-  import {getRankingInfo} from "@/api/ranking"
-  import {getSongVKey} from "@/api/song"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as RankingModel from "@/model/ranking"
-  import * as SongModel from "@/model/song"
+  import { getRankingInfo } from "@/api/ranking"
+  import { getSongVKey } from "@/api/song"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as RankingModel from "@/models/ranking"
+  import * as SongModel from "@/models/song"
 
   export default {
     name: "ranking-info",

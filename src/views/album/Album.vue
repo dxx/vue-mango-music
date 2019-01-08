@@ -1,25 +1,25 @@
 <template>
-  <div class="music-singer">
+  <div class="music-album">
     <detail :title="title" :data="data" :loading="loading" />
     <toast :show="toastShow" content="加载失败..." />
   </div>
 </template>
 
 <script>
-  import Toast from "@/common/Toast"
+  import Toast from "@/components/Toast"
   import Detail from "../detail/Detail"
-  import {getSingerInfo} from "@/api/singer"
-  import {getSongVKey} from "@/api/song"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as SingerModel from "@/model/singer"
-  import * as SongModel from "@/model/song"
+  import { getAlbumInfo } from "@/api/recommend"
+  import { getSongVKey } from "@/api/song"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as AlbumModel from "@/models/album"
+  import * as SongModel from "@/models/song"
 
   export default {
-    name: "singer",
+    name: "album",
     data() {
       return {
         loading: true,
-        title: "歌曲",
+        title: "专辑",
         data: {
           name: "",
           img: require("../../assets/imgs/play_bg.jpg"),
@@ -30,13 +30,14 @@
       };
     },
     methods: {
+      // 获取歌曲文件地址
       getSongUrl(song, mId) {
         getSongVKey(mId).then((res) => {
           if (res) {
             if (res.code === CODE_SUCCESS) {
               if (res.data.items) {
                 let item = res.data.items[0];
-                song.url = `http://dl.stream.qqmusic.qq.com/${item.filename}?vkey=${item.vkey}&guid=3655047200&fromtag=66`
+                song.url = `http://dl.stream.qqmusic.qq.com/${item.filename}?vkey=${item.vkey}&guid=3655047200&fromtag=66`;
               }
             }
           }
@@ -44,26 +45,26 @@
       }
     },
     created() {
-      getSingerInfo(this.$route.params.singerId).then((res) => {
-        // console.log("获取歌手详情：");
+      getAlbumInfo(this.$route.params.albumId).then((res) => {
+        // console.log("获取专辑详情：");
         if (res) {
           // console.log(res);
           if (res.code === CODE_SUCCESS) {
-            let singer = SingerModel.createSingerByDetail(res.data);
+            let album = AlbumModel.createAlbumByDetail(res.data);
+            album.desc = res.data.desc;
 
             let songList = res.data.list;
             let songs = [];
             songList.forEach(item => {
-              if (item.musicData.pay.payplay === 1) { return }
-              let song = SongModel.createSong(item.musicData);
-              //  获取歌曲vkey
-              this.getSongUrl(song, song.mId);
+              let song = SongModel.createSong(item);
+              // 获取歌曲vkey
+              this.getSongUrl(song, item.songmid);
               songs.push(song);
             });
             this.data = {
-              name: singer.name,
-              img: singer.img,
-              desc: '',
+              name: album.name,
+              img: album.img,
+              desc: album.desc,
               songs
             };
             this.loading = false;
@@ -86,7 +87,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  .music-singer
+  .music-album
     position: fixed
     top: 0
     left: 0

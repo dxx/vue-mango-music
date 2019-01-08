@@ -63,12 +63,12 @@
 </template>
 
 <script>
-  import {mapState, mapMutations} from "vuex"
-  import {SHOW_PLAYER, CHANGE_SONG} from "../../store/mutation-types"
-  import Toast from "@/common/Toast"
+  import { mapState, mapMutations } from "vuex"
+  import { SHOW_PLAYER, CHANGE_SONG } from "../../store/mutation-types"
+  import Toast from "@/components/Toast"
   import MiniPlayer from "./MiniPlayer"
   import ProgressBar from "./ProgressBar"
-  import {Song} from "@/model/song"
+  import { Song } from "@/models/song"
 
   export default {
     name: "player",
@@ -125,16 +125,16 @@
         if (this.$refs.singerImg.className.indexOf("rotate") === -1) {
           this.$refs.singerImg.classList.add("rotate");
         } else {
-          this.$refs.singerImg.style["webkitAnimationPlayState"] = "running";
-          this.$refs.singerImg.style["animationPlayState"] = "running";
+          this.$refs.singerImg.style.webkitAnimationPlayState = "running";
+          this.$refs.singerImg.style.animationPlayState = "running";
         }
       },
       /**
        * 停止旋转图片
        */
       _stopImgRotate() {
-        this.$refs.singerImg.style["webkitAnimationPlayState"] = "paused";
-        this.$refs.singerImg.style["animationPlayState"] = "paused";
+        this.$refs.singerImg.style.webkitAnimationPlayState = "paused";
+        this.$refs.singerImg.style.animationPlayState = "paused";
       },
       handleLoad(e) {
         this.$refs.playerBg.style.backgroundImage = `url("${e.currentTarget.src}")`;

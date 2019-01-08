@@ -1,5 +1,5 @@
 import jsonp from "./jsonp"
-import {URL, PARAM} from "./config"
+import { URL, PARAM } from "./config"
 
 export function getSongVKey(songMid) {
   const data = Object.assign({}, PARAM, {

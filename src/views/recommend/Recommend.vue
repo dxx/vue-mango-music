@@ -44,11 +44,11 @@
 
 <script>
   import Swiper from "swiper"
-  import Loading from "@/common/loading/Loading"
-  import Scroll from "@/common/Scroll"
-  import {getCarousel, getNewAlbum} from "@/api/recommend"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as AlbumModel from "@/model/album"
+  import Loading from "@/components/loading/Loading"
+  import Scroll from "@/components/Scroll"
+  import { getCarousel, getNewAlbum } from "@/api/recommend"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as AlbumModel from "@/models/album"
 
   import "swiper/dist/css/swiper.css"
 

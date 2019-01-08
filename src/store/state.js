@@ -1,4 +1,4 @@
-import localStorage from "../utils/storage"
+import localStorage from "../util/storage"
 
 // 状态数据
 const initialState = {

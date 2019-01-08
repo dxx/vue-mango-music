@@ -5,11 +5,11 @@
 </template>
 
 <script>
-  import Root from "./components/Root"
-  import "./utils/skin"
+  import Root from "./views/Root"
+  import "./util/skin"
 
   export default {
-    name: 'app',
+    name: "app",
     components: {
       Root
     }

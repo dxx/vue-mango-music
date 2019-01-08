@@ -68,17 +68,17 @@
 </template>
 
 <script>
-  import {mapMutations} from "vuex"
-  import {CHANGE_SONG, SET_SONGS} from "../../store/mutation-types"
-  import Loading from "@/common/loading/Loading"
-  import Scroll from "@/common/Scroll"
-  import {getTransitionEndName} from "@/utils/event"
-  import {getHotKey, search} from "@/api/search"
-  import {getSongVKey} from "@/api/song"
-  import {CODE_SUCCESS} from "@/api/config"
-  import * as SingerModel from "@/model/singer"
-  import * as AlbumModel from "@/model/album"
-  import * as SongModel from "@/model/song"
+  import { mapMutations } from "vuex"
+  import { CHANGE_SONG, SET_SONGS } from "../../store/mutation-types"
+  import Loading from "@/components/loading/Loading"
+  import Scroll from "@/components/Scroll"
+  import { getTransitionEndName } from "@/util/event"
+  import { getHotKey, search } from "@/api/search"
+  import { getSongVKey } from "@/api/song"
+  import { CODE_SUCCESS } from "@/api/config"
+  import * as SingerModel from "@/models/singer"
+  import * as AlbumModel from "@/models/album"
+  import * as SongModel from "@/models/song"
 
   export default {
     name: "search",
@@ -108,13 +108,13 @@
           let transitionEndName = getTransitionEndName(item);
           item.addEventListener(transitionEndName, function() {
             this.style.display = "none";
-            this.style["webkitTransform"] = "translate3d(0, 0, 0)";
-            this.style["transform"] = "translate3d(0, 0, 0)";
+            this.style.webkitTransform = "translate3d(0, 0, 0)";
+            this.style.transform = "translate3d(0, 0, 0)";
             this.run = false;
 
             let icon = this.querySelector("div");
-            icon.style["webkitTransform"] = "translate3d(0, 0, 0)";
-            icon.style["transform"] = "translate3d(0, 0, 0)";
+            icon.style.webkitTransform = "translate3d(0, 0, 0)";
+            icon.style.transform = "translate3d(0, 0, 0)";
           }, false);
         });
       },
@@ -132,12 +132,12 @@
               item.style.display = "inline-block";
               setTimeout(() => {
                 item.run = true;
-                item.style["webkitTransform"] = "translate3d(0, 1000px, 0)";
-                item.style["transform"] = "translate3d(0, 1000px, 0)";
+                item.style.webkitTransform = "translate3d(0, 1000px, 0)";
+                item.style.transform = "translate3d(0, 1000px, 0)";
 
                 let icon = item.querySelector("div");
-                icon.style["webkitTransform"] = "translate3d(-30px, 0, 0)";
-                icon.style["transform"] = "translate3d(-30px, 0, 0)";
+                icon.style.webkitTransform = "translate3d(-30px, 0, 0)";
+                icon.style.transform = "translate3d(-30px, 0, 0)";
               }, 10);
               break;
             }
