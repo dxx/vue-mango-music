@@ -3,9 +3,9 @@
     <transition name="player-rotate">
       <div class="player" v-show="showStatus">
         <div class="header">
-              <span class="header-back" @click="hidePlayer">
-                <i class="icon-back"></i>
-              </span>
+            <span class="header-back" @click="hidePlayer">
+              <i class="icon-back"></i>
+            </span>
           <div class="header-title">
             {{song.name}}
           </div>
@@ -463,7 +463,7 @@
         width: 260px
         height: @width
         border-radius: 50%
-        border: 8px solid rgba(221, 221, 221, 0.3)
+        border: 10px solid rgba(221, 221, 221, 0.3)
         img
           width: 100%
           height: @width

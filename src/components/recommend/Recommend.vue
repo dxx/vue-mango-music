@@ -155,6 +155,7 @@
             line-height: 30px
             position: relative
             .album-name, .singer-name
+              max-width: 70%
               overflow: hidden
               text-overflow: ellipsis
               white-space: nowrap

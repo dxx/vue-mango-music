@@ -16,23 +16,19 @@ export function getHotKey() {
 export function search(w) {
   const data = Object.assign({}, PARAM, {
     g_tk: 5381,
-    uin: 0,
     platform: "h5",
-    needNewCode: 1,
-    notice: 0,
-    zhidaqu: 1,
+    needNewCode: 0,
     catZhida: 1,
+    cr: 1,
     t: 0,
-    flag: 1,
-    ie: "utf-8",
-    sem: 1,
+    flag_qc: 0,
     aggr: 0,
-    perpage: 20,
     n: 20,
     p: 1,
     w,
-    remoteplace: "txt.mqq.all",
+    remoteplace: "txt.yqq.song",
     _: new Date().getTime()
   });
+
   return jsonp(URL.search, data, OPTION);
 }

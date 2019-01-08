@@ -35,7 +35,7 @@
             </div>
             <div class="right">
               <div class="singer">{{singer.name}}</div>
-              <div class="info">单曲{{singer.songnum}} 专辑{{singer.albumnum}}</div>
+              <div class="info">单曲{{singer.songNum}} 专辑{{singer.albumNum}}</div>
             </div>
           </div>
           <!-- 歌曲列表 -->
@@ -166,15 +166,17 @@
                 // 0：表示歌曲
                 case 0:
                   break;
-                // 2：表示歌手
-                case 2:
-                  singer = SingerModel.createSingerBySearch(zhida);
-                  singer.songnum = zhida.songnum;
-                  singer.albumnum = zhida.albumnum;
+                // 1：表示歌手
+                case 1:
+                  let zhiDaSinger = zhida.zhida_singer;
+                  singer = SingerModel.createSingerBySearch(zhiDaSinger);
+                  singer.songNum = zhiDaSinger.songNum;
+                  singer.albumNum = zhiDaSinger.albumNum;
                   break;
-                // 3: 表示专辑
-                case 3:
-                  album = AlbumModel.createAlbumBySearch(zhida);
+                // 2: 表示专辑
+                case 2:
+                  let zhiDaAlbum = zhida.zhida_album;
+                  album = AlbumModel.createAlbumBySearch(zhiDaAlbum);
                   break;
                 default:
                   break;
@@ -290,13 +292,14 @@
       border-radius: 3px
       line-height: 0
       /*background-color: #FFFFFF*/
+      i
+        vertical-align: middle
       .search-input
         width: 80%
-        margin-left: 10px
+        margin-left: 8px
         background: none
-        border:none
+        border: none
         outline: none
-        vertical-align: top
         /*color: #000000*/
     .cancel-button
       position: absolute
@@ -334,6 +337,7 @@
       bottom: 0
       .album-wrapper
         padding: 5px 10px
+        font-size: 0
         /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
@@ -346,7 +350,7 @@
           display: inline-block
           margin-left: 10px
           vertical-align: top
-          max-width: 200px
+          max-width: 80%
           .song, .singer
             overflow: hidden
             text-overflow: ellipsis
@@ -362,6 +366,7 @@
             /*color: rgba(0, 0, 0, .6)*/
       .singer-wrapper
         padding: 5px 10px
+        font-size: 0
         /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
@@ -386,19 +391,20 @@
             /*color: rgba(0, 0, 0, .6)*/
       .song-wrapper
         padding: 5px 10px
+        font-size: 0
         /*border-top: 1px solid #E5E5E5*/
         .left
           display: inline-block
           width: 40px
           height: 40px
-          line-height: 40px
+          line-height: 42px
           text-align: center
           font-size: 22px
         .right
           display: inline-block
           margin-left: 10px
           vertical-align: top
-          max-width: 200px
+          max-width: 80%
           .song, .singer
             overflow: hidden
             text-overflow: ellipsis

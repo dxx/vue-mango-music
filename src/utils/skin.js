@@ -156,9 +156,9 @@ let getSkinStyle = (skin) => {
     .skin-search-result .singer-wrapper .info {
       color: ${skin.albumColor};
     }
-    .skin-search-result .result-container .album-wrapper,
-    .skin-search-result .result-container .singer-wrapper,
-    .skin-search-result .result-container .song-wrapper {
+    .skin-search-result .album-wrapper,
+    .skin-search-result .singer-wrapper,
+    .skin-search-result .song-wrapper {
       border-top: 1px solid ${skin.searchResultBorderColor};
     }
     .skin-detail-wrapper {
