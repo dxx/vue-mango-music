@@ -300,6 +300,7 @@
         background: none
         border: none
         outline: none
+        vertical-align: middle
         /*color: #000000*/
     .cancel-button
       position: absolute
