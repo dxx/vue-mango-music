@@ -293,14 +293,15 @@
       line-height: 0
       /*background-color: #FFFFFF*/
       i
-        vertical-align: middle
+        float: left
       .search-input
         width: 80%
+        height: 15px
         margin-left: 8px
+        font-size: 13px
         background: none
         border: none
         outline: none
-        vertical-align: middle
         /*color: #000000*/
     .cancel-button
       position: absolute
