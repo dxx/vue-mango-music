@@ -8,6 +8,8 @@
 
 # Vue Mango Music
 
+> This repository is no longer maintained. Some interfaces may be invalid.
+
 This is a music player application written by vue.
 
 It uses vue to build.
